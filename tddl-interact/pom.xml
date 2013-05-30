@@ -9,7 +9,27 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>tddl-interact</artifactId>
 	<name>tddl-interact v${project.version}</name>
-	<dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.4.3</version>
+                <configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -28,4 +48,7 @@
 			<artifactId>groovy-all</artifactId>
 		</dependency>
 	</dependencies>
+    <properties>
+        <project.build.sourceEncoding>GBK</project.build.sourceEncoding>
+    </properties>
 </project>
